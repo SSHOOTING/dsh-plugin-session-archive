@@ -12,14 +12,16 @@ interface CommandContext {
       handler: (args: { agent?: { session?: { events?: readonly unknown[] } }; rawInput?: string }) =>
         | { kind: 'success'; text: string }
         | { kind: 'error'; text: string }
-    }): unknown
+    }): () => void
   }
+  /** Cordis lifecycle scope; registers disposables so disable/reload leaves no duplicate command. */
+  effect?: (body: () => Generator, label?: string) => void
   logger?: { info?: (message: string) => void }
 }
 
 /** Cordis entry: `/session-export [md|json] [--max-kb=N]`. */
 export function apply(ctx: CommandContext): void {
-  ctx.commands.register({
+  const dispose = ctx.commands.register({
     name: 'session-export',
     description: 'Export this session as redacted Markdown or JSON (local only)',
     input: { hint: '[md|json] [--max-kb=128]' },
@@ -40,5 +42,8 @@ export function apply(ctx: CommandContext): void {
       }
     },
   })
+  if (typeof ctx.effect === 'function') {
+    ctx.effect(function* () { yield dispose }, `${name} lifecycle`)
+  }
   ctx.logger?.info?.('[dsh-plugin-session-archive] loaded (read-only; /session-export available)')
 }

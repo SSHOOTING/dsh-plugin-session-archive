@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-session-archive",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH plugin: export the current session as redacted Markdown or JSON with one command. Local only, no network, no file writes.",
   "type": "module",
   "main": "lib/index.js",
