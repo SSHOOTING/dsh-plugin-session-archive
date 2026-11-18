@@ -1,0 +1,4 @@
+# Official bundle layer. `dsh plugin add dsh-plugin-session-archive` applies this.
+- insert:
+    - id: dsh-plugin-session-archive
+      name: dsh-plugin-session-archive
