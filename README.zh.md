@@ -112,3 +112,6 @@ npm pack --dry-run
 - [dsh-plugin-token-budget](https://github.com/SSHOOTING/dsh-plugin-token-budget)
 - [dsh-plugin-mcp-guard](https://github.com/SSHOOTING/dsh-plugin-mcp-guard)
 - [dsh-plugin-free-model-advisor](https://github.com/SSHOOTING/dsh-plugin-free-model-advisor)
+## Demo
+
+![Demo](docs/demo.png)

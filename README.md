@@ -106,6 +106,11 @@ Tests are fully offline with synthetic event fixtures.
 
 [MIT](LICENSE)
 
+
+## Demo
+
+![Demo](docs/demo.png)
+
 ## Related plugins
 
 - [dsh-plugin-safe-route](https://github.com/SSHOOTING/dsh-plugin-safe-route)
