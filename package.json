@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-session-archive",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DSH plugin: export the current session as redacted Markdown or JSON with one command. Local only, no network, no file writes.",
   "type": "module",
   "main": "lib/index.js",
@@ -30,7 +30,8 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node tests/core.test.mjs && node tests/entry.test.mjs",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "prepack": "npm run build"
   },
   "dsh": {
     "bundle": {

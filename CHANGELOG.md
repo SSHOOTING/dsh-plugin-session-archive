@@ -12,3 +12,9 @@
 - Credential redaction on every emitted field; `--max-kb` output cap (1–512 KB).
 - Read-only: no network calls and no file writes.
 - Fully offline test suite with synthetic event fixtures.
+
+## 0.1.2 (2026-11-19)
+
+- Release packaging: run the TypeScript build automatically before npm pack/publish.
+- Refresh install documentation to require --profile web.
+- Publish the first installable npm version for this plugin.
