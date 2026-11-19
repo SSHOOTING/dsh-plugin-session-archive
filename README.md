@@ -105,3 +105,10 @@ Tests are fully offline with synthetic event fixtures.
 ## License
 
 [MIT](LICENSE)
+
+## Related plugins
+
+- [dsh-plugin-safe-route](https://github.com/SSHOOTING/dsh-plugin-safe-route)
+- [dsh-plugin-token-budget](https://github.com/SSHOOTING/dsh-plugin-token-budget)
+- [dsh-plugin-mcp-guard](https://github.com/SSHOOTING/dsh-plugin-mcp-guard)
+- [dsh-plugin-free-model-advisor](https://github.com/SSHOOTING/dsh-plugin-free-model-advisor)
