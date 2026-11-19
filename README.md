@@ -7,7 +7,7 @@ Sessions live in a local log. This plugin turns the current one into something y
 ## Install
 
 ```powershell
-dsh plugin add dsh-plugin-session-archive
+dsh plugin --profile web add dsh-plugin-session-archive
 ```
 
 Requires Node `^22.19.0 || >=24` and DSH `>=0.2.0-rc.2 <0.3.0`.
@@ -87,7 +87,7 @@ Unknown fields are never serialized. Credential-looking strings are redacted in 
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| `/session-export` not found | Bundle row not installed | Re-run `dsh plugin add dsh-plugin-session-archive`, restart DSH. |
+| `/session-export` not found | Bundle row not installed | Re-run `dsh plugin --profile web add dsh-plugin-session-archive`, restart DSH. |
 | Export is truncated | `--max-kb` cap reached | Raise it up to 512. |
 | Tool arguments look empty | Only `command`/`path`/`query` are rendered by design | This is intentional to avoid leaking arbitrary data. |
 | No route shown on assistant messages | No `request/*` event yet in the session | Use the session once more, then export. |

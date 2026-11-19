@@ -7,7 +7,7 @@
 ## 安装
 
 ```powershell
-dsh plugin add dsh-plugin-session-archive
+dsh plugin --profile web add dsh-plugin-session-archive
 ```
 
 要求 Node `^22.19.0 || >=24`，DSH `>=0.2.0-rc.2 <0.3.0`。
@@ -87,7 +87,7 @@ $ echo token=[redacted]
 
 | 现象 | 原因 | 处理 |
 |---|---|---|
-| 找不到 `/session-export` | bundle 行未安装 | 重跑 `dsh plugin add dsh-plugin-session-archive`，重启 DSH。 |
+| 找不到 `/session-export` | bundle 行未安装 | 重跑 `dsh plugin --profile web add dsh-plugin-session-archive`，重启 DSH。 |
 | 导出被截断 | 达到 `--max-kb` 上限 | 调高到最多 512。 |
 | 工具参数为空 | 设计上只渲染 `command`/`path`/`query` | 为避免泄露任意数据，这是预期行为。 |
 | 助手消息没有路由 | 会话里还没有 `request/*` 事件 | 再聊几轮后导出。 |
