@@ -119,4 +119,4 @@ npm pack --dry-run
 - [dsh-plugin-free-model-advisor](https://github.com/SSHOOTING/dsh-plugin-free-model-advisor)
 ## Demo
 
-![Demo](docs/demo.png)
+![Demo](https://raw.githubusercontent.com/SSHOOTING/dsh-plugin-session-archive/main/docs/demo.png)

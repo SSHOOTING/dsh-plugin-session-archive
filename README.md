@@ -109,7 +109,7 @@ Tests are fully offline with synthetic event fixtures.
 
 ## Demo
 
-![Demo](docs/demo.png)
+![Demo](https://raw.githubusercontent.com/SSHOOTING/dsh-plugin-session-archive/main/docs/demo.png)
 
 
 ## Listed in
